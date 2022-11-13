@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Etiquetas, meta requeridas -->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" type="image/x-icon" href="img/logo-sepi-ico.ico" />
+
+	<!-- BOOSTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name="description" content="SISTEMA DE EVALUACI&Oacute;N DE PROYECTOS DE INVESTIGACI&Oacute;N (SEPI)"/>
+
+	<!-- Fuentes -->
+	<link rel="stylesheet" href="https://use.typekit.net/prd5qys.css">
+	<link href="//db.onlinewebfonts.com/c/ed5050574c9de07c7d0a559f8c6a02a7?family=AR+BERKLEY" rel="stylesheet" type="text/css"/>
+
+	<!-- ESTILOS CSS -->
+		<style type="text/css">
+			/* DISPLay */
+				.NoVisble{
+					display: none;
+				}
+				.hidden{
+					display: none;
+				}	
+			.nav-margin{
+				margin: 20px;
+			}
+			/* BACKGROUND COLOR */
+				.background_002C73{
+					background-color: #002C73;
+				}
+				.background_FFF{
+					background-color: #FFF;
+					color: black;
+				}
+				.background_E5DCDA{
+					background-color: #E5DCDA;
+				}
+				.background_eaeaea{
+					background-color: #eaeaea;
+				}
+				.background_BB381C{
+					background-color: #BB381C;
+				}
+				.background_0005{
+					background-color: rgba(0,0,0,.5);
+				}
+				.background_004b8d{
+				background-color: #004b8d;
+				}
+			/* BACKGROUND IMAGE */
+				.images_UAGro{
+					background-image: url(https://www.uagro.mx/conocenos/images/uagro-logo-color2.png);
+				}
+				.images_blue{
+					background-image: url(/public/img/blue.png);
+					color: #FFF;
+				}
+				.images_red{
+					background-image: url(/public/img/red.png);
+					color: #FFF;
+				}
+				.images_gray{
+					background-image: url(/public/img/gray.png);
+					color: #FFF;
+				}
+			/* TEXT COLOR */
+				.color_FFF{
+					color: #FFF;
+				}
+				.color_002C73{
+					color: #002C73;
+				}
+				.color_D4AC0D{
+					color: #D4AC0D;
+				}
+				.color_ff9d00{
+					color: #ff9d00;
+				}
+				.color_BB381C{
+					color: #BB381C;
+				}
+				.color_7C7777{
+					color: #7C7777;
+				}
+				.color_00bf1b{
+					color: #00bf1b;
+					font-size: .7rem;
+				}
+				.color_00bf1b_color{
+					color: #00bf1b;
+				}
+				.color_004b8d{
+				color: #004b8d;
+				}
+				.color_1D8348{
+					color: #1D8348;
+				}
+			/* TEXT COLOR HOVER */
+				.a_FFF:hover{
+					color: #FFF;
+				}
+
+			.measurements_130{
+				height: 130px;
+			}
+			.measurements_300{
+				height: 300px;
+			}
+
+			.edge_top{
+				box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+			}
+			.geneva{
+				font-family: Geneva;
+			}
+			.sans-serif{
+				font-family: sans-serif;
+			}
+			.verdana{
+				font-family: Verdana;
+			}
+			.calibri{
+				font-family: Calibri;
+			}
+			#button-image{
+				background-color: transparent;
+				border: none;
+			}
+			.button-image-minpx20{
+				background-color: transparent;
+				border: none;
+				width: 20px;
+				height: 20px;
+			}
+			.nct-justify-content-center{
+				text-align: center;
+			}
+			.border-blue-solid-v1{
+				border-right-style: solid;
+				border-left-style: solid;
+				border-top-style: solid;
+				border-bottom-style: solid;
+				border-top-color: #002C73;
+				border-right-color: #002C73;
+				border-bottom-color: #002C73;
+				border-left-color: #002C73;
+				display:inline-block;
+				margin-left:auto;
+				margin-right:auto;
+				text-align:center;
+			}
+			.border-blue-solid-v2{
+				border-left-style: solid;
+				border-top-style: solid;
+				border-bottom-style: solid;
+			}
+			.border-blue-solid-v3{
+				border-right-style: solid;
+				border-left-style: solid;
+				border-top-style: solid;
+				border-bottom-style: solid;
+				text-align:center;
+			}
+			.texto-vertical{
+				-webkit-transform: rotate(-90deg); 
+				-moz-transform: rotate(-90deg);
+				-o-transform: rotate(-90deg);
+				transform: rotate(-90deg);
+				height: 300px;
+			}
+			.bg-gray-50{
+				background-color: rgba(249, 250, 251);
+			}
+			.bg-gray-100{
+				background-color: rgba(243, 244, 246);
+			}
+			.bg-gray-200{
+				background-color: rgba(229, 231, 235);
+			}
+			.bg-gray-300{
+				background-color: rgba(209, 213, 219);
+			}
+
+			.bg-gray-400{
+				background-color: rgba(156, 163, 175);
+			}
+			.bg-gray-500{
+				background-color: rgba(107, 114, 128);
+			}
+			.bg-gray-600{
+				background-color: rgba(75, 85, 99);
+			}
+			.bg-gray-700{
+				background-color: rgba(55, 65, 81);
+			}
+			.bg-gray-800{
+				background-color: rgba(31, 41, 55);
+			}
+			.bg-gray-900{
+				background-color: rgba(17, 24, 39);
+			}
+			.h-6{
+				height: 1.5rem;
+			}
+			.w-6{
+				width: 1.5rem;
+			}
+			.h-7{
+				height: 1.75rem;
+			}
+			.w-7{
+				width: 1.75rem;
+			}
+			.h-8{
+				height: 2rem;
+			}
+			.w-8{
+				width: 2rem;
+			}
+			.h-9{
+				height: 2.25rem;
+			}
+			.w-9{
+				width: 2.25rem;
+			}
+			.font-franklin{
+				font-family: 'Franklin Gothic Demi Cond';
+			}
+			.font-adobe-arabic{
+				font-family:'adobe-arabic', sans-serif;
+			}
+			.size-1rem{
+				font-size: 1rem;
+			}
+			.size-1-5rem{
+				font-size: 1.5rem;
+			}
+			.size-2rem{
+				font-size: 2rem;
+			}
+			.size-2-5rem{
+				font-size: 2.5rem;
+			}
+			.size-3rem{
+				font-size: 3rem;
+			}
+			.size-4rem{
+				font-size: 4rem;
+			}
+			.size-5rem{
+				font-size: 5rem;
+			}
+			.size-6rem{
+				font-size: 6rem;
+			}
+			.size-7rem{
+				font-size: 7rem;
+			}
+			.size-8rem{
+				font-size: 8rem;
+			}
+			.size-9rem{
+				font-size: 9rem;
+			}
+			.size-10rem{
+				font-size: 10rem;
+			}
+			.line-height-normal{
+				line-height: normal;
+			}
+			.line-height-1em{
+				line-height: 1em;
+			}
+			.line-height-2em{
+				line-height: 2em;
+			}
+			.line-height-3em{
+				line-height: 3em;
+			}
+			.line-height-4em{
+				line-height: 4em;
+			}
+			.line-height-90p{
+				line-height: 90%;
+			}
+			.line-height-99p{
+				line-height: 99%;
+			}
+			.text-indent-1p{
+				text-indent: 1em;
+			}
+			.text-indent-1m{
+				text-indent: -1em;
+			}.texto-borde{
+				-webkit-text-stroke: 2px black;
+				color: transparent;
+			}
+			.border-circle{
+				border-radius: 50%;
+			}
+			.border-clubes{
+				border: solid 4px #000;
+				width: 200px;
+				height: 200px;
+			}
+			.hr-clubes{
+				background-color: #000;
+				height: 2px;
+				margin: 0;
+				padding: 0;
+			}
+			.font-berkley{
+				font-family: 'AR BERKLEY';
+			}
+			.color-clubes{
+				color: #203864;
+			}
+			.cursor-pointer{
+				cursor: pointer;
+			}
+			.background-clubes{
+				background-image: url(img/fondo-clubes.png);
+				background-repeat: repeat-y;
+				background-size: contain;
+			}
+            @media screen and (max-width:870px){
+                .size-9rem{
+                    font-size: 7rem;
+                }
+                .size-5rem{
+                    font-size: 3rem;
+                }
+                .size-2rem{
+                    font-size: 1.5rem;
+                }
+                .border-clubes{
+                    width: 150px;
+                    height: 150px;
+                    margin-top: 30px;
+                }
+                .club{
+                    font-size: 2.2rem;
+                }
+                .dr{
+                    font-size: 1.4rem;
+                }
+            }
+            @media screen and (max-width:767px){
+                .facultad{
+                    text-align: center;
+                }
+                .border-clubes{
+                    width: 120px;
+                    height: 120px;
+                    margin-top: 40px;
+                }
+                .club{
+                    font-size: 2rem;
+                }
+                .dr{
+                    font-size: 1.2rem;
+                }
+            }
+            @media screen and (max-width:600px){
+                .size-9rem{
+                    font-size: 5rem;
+                }
+                .size-5rem{
+                    font-size: 2.7rem;
+                }
+                .line-height-4em{
+                    line-height: 3em;
+                }
+                .border-clubes{
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 15px;
+                }
+            }
+            @media screen and (max-width:523px){   
+                .club{
+                    font-size: 1.5rem;
+                }
+                .dr{
+                    font-size: 0.8rem;
+                }
+            }
+            @media screen and (max-width:450px){
+                .size-9rem{
+                    font-size: 4rem;
+                }
+                .size-5rem{
+                    font-size: 2.5rem;
+                }
+                .size-2rem{
+                    font-size: 1.3rem;
+                }
+                .line-height-4em{
+                    line-height: 2em;
+                }
+                .club{
+                    font-size: 1.5rem !important;
+                }
+                .dr{
+                    font-size: 0.8rem !important;
+                }
+            }
+		</style>
+
+	<title>CLUBES ESTUDIANTILES</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body class="background_eaeaea">
+	<div class="container-fluid"> <!-- Div #1 -->
+		<div class="row justify-content-center background-clubes"> <!-- Div #2 -->
+            <div class="col-12 shadow-lg ">
+				<div class="row align-items-center justify-content-center text-center bg-gray pb-2">
+					<div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto pt-1 pb-1">
+						<a href="/"><img src="img/new-logo.png" alt="UAGro" style="height: 70px;"/></a>
+					</div>
+					<div class="col-auto facultad">
+					  <p class="h4 color_002C73 calibri">
+					  	Facultad de Ciencias Qu&iacute;mico-Biol&oacute;gicas<br>Programa Educativo de Biotecnolog&iacute;a
+					  </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-11 col-md-10 col-lg-10 col-xl-10 pb-5"><!-- Div #3 -->
+
+
+                
+
+
+                <div class="container-fluid mt-5">
+
+                    <div class="row text-center mt-5 mb-3">
+                        <div class="col-12 align-self-end line-height-4em mt-5">
+                            <p class="font-franklin size-9rem text-indent-1p">
+                                <font color="#7030A0">C</font><font color="#385723">l</font><font color="#C00000">u</font><font color="#7030A0">b</font><font color="#C00000">e</font><font color="#385723">s</font>
+                                <p class="font-franklin size-5rem text-indent-1m">de Biotec</p>
+                            </p>
+                            <label class="font-adobe-arabic size-2rem line-height-normal"><i>Trabajando por la formación integral,<br>inclusiva y de excelencia.</i></label>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-right club" style="margin: 0; padding:0;">Club de lectura</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes size-2rem text-right dr" style="font-family: 'Adobe Caslon Pro Bold';">Dra. Iris Paola Guzmán Guzmán</p>
+                            <div class="close-box-collapse text-right">
+                                Leer no solo nos da el conocimiento, la lectura también n
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseIrisG" role="button" aria-expanded="false" aria-controls="collapseIrisG" onclick="closeTextShortAll(1)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseIrisG">
+                                Leer no solo nos da el conocimiento, la lectura también nos ofrece una ventana hacia otras culturas y otros pueblos, a veces es un pasadizo hacia mundos inexistentes. La lectura nos hace seres razonables y críticos; tolerantes y de mente abierta al mundo.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseIrisG" role="button" aria-expanded="false" aria-controls="collapseIrisG" onclick="openTextShortAll(1)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/IRIS PAOLA GUZMAN.jpg" alt="..." class="border-circle border-clubes image-size">
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/BRENDA GISELLE ESCAMILLA.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-left club" style="margin: 0; padding:0;">Club de pintura</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-left size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">LB. Brenda G. Escamilla S.</p>
+                            <div class="close-box-collapse">
+                                Desde que era pequeña he desarrollado el gusto por el art
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseBrendaG" role="button" aria-expanded="false" aria-controls="collapseBrendaG" onclick="closeTextShortAll(2)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseBrendaG">
+                                Desde que era pequeña he desarrollado el gusto por el arte visual, el cual involucra un cúmulo de sensaciones en el que no sólo se desarrolla el sentido visual, sino también el gusto, el tacto y la actividad motora.
+                                Para mí, el arte marca una liberación física, emocional y mental; me permite expresar mis pensamientos y mi personalidad. He sido partícipe de muchas obras que han cautivado al espectador, sin embargo, para llegar hasta ese punto, he tenido que fracasar, aprender y mantenerme constante, es por ello que me he dado cuenta de que como artistas no nos debemos de conformar, sino buscar ir más allá de lo que se espera por uno mismo.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseBrendaG" role="button" aria-expanded="false" aria-controls="collapseBrendaG" onclick="openTextShortAll(2)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-right club" style="margin: 0; padding:0;">Club de música</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-right size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Dr. Miguel Ángel Mendoza</p>
+                            <div class="close-box-collapse text-right">
+                                Considero que el trabajo es muy importante en la vida, per
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseMiguelM" role="button" aria-expanded="false" aria-controls="collapseMiguelM" onclick="closeTextShortAll(3)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseMiguelM">
+                                Considero que el trabajo es muy importante en la vida, pero no es lo único ni lo más importante. Aunque el tiempo libre no es mucho, entre las actividades que me gusta realizar fuera del ámbito académico, están el deporte (futbol principalmente), leer, ver una buena película, y sobre todo escuchar y hacer música. 
+                                Desde hace varios años, de forma lírica aprendí a tocar guitarra, bajo eléctrico, teclado y un poco de batería. He participado como músico en una iglesia cristiana, dedicándome básicamente al teclado. Me gustan varios géneros musicales, el blues, rock y jazz son de mis preferidos, sin embargo, no me limito sólo a ellos. 
+                                La música es un arte aplicable a cualquier ámbito, que puede afectar la percepción de quien la escucha y, por supuesto, también de quien la hace.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseMiguelM" role="button" aria-expanded="false" aria-controls="collapseMiguelM" onclick="openTextShortAll(3)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/MIGUEL MENDOZA.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/CARLOS ORTUÑO.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-left club" style="margin: 0; padding:0;">Club de Italiano</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-left size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Dr. Carlos Ortuño Pineda</p>
+                            <div class="close-box-collapse">
+                                En mis tiempos libres realizo diferentes actividades recre
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseCarlosO" role="button" aria-expanded="false" aria-controls="collapseCarlosO" onclick="closeTextShortAll(4)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseCarlosO">
+                                En mis tiempos libres realizo diferentes actividades recreativas y de crecimiento personal; principalmente aquellas que me permiten el contacto con la naturaleza y con las bellas artes. De la naturaleza quisiera tener un jardín con todas las especies del mundo antes de que desaparezcan. De las bellas artes me gusta la pintura aunque le dedico poco tiempo a ello. Me considero apasionado de la literatura universal y lectura de diferente género, aunque prefiero la fantasía y la ficción. Me considero un buen lector y me siento fracasado cuando no leo por lo menos 50 libros en un año. 
+                                Estudié la lengua italiana porque considero a Italia como uno de los semilleros del arte y la cultura en el mundo. Me impresionaba la Italia de Dante, la de Da Vinci y la de Miguel Ángel, pero también la Italia del imaginario de Collodi, Calvino y Baricco.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseCarlosO" role="button" aria-expanded="false" aria-controls="collapseCarlosO" onclick="openTextShortAll(4)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-right club" style="margin: 0; padding:0;">Club de Francés</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-right size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Dr. Eduardo Castañeda S.</p>
+                            <div class="close-box-collapse text-right">
+                                Me siento muy emocionado por tener la oportunidad de coord
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseEduardoC" role="button" aria-expanded="false" aria-controls="collapseEduardoC" onclick="closeTextShortAll(5)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseEduardoC">
+                                Me siento muy emocionado por tener la oportunidad de coordinar el club de francés de la FCQB. Mi pasión por la cultura francesa inició desde que era adolescente, recuerdo que siempre escuchaba en la televisión y las películas que el idioma francés era muy elegante y había escuchado un poco sobre los escritores y pintores franceses. Sin embargo, mi primer contacto real con la cultura francesa fue muchos años después, cuando estaba por terminar mi maestría en la CDMX.  En el último año de la maestría, mi entonces director de tesis me preguntó que si me interesaría irme a hacer el doctorado a Francia. Y como imaginarás, no dudé ni un segundo en decir que por supuesto que sí. Aunque en ese momento no pensé en todo lo que implicaba irme a vivir a otro país, muy lejos de mi familia, donde hablan un idioma que desconocía y todo lo demás.  Solo pensé que quería irme a Francia a estudiar el doctorado. A partir de ese momento, puse manos a la obra y empecé a investigar todo lo que pude sobre Francia, su cultura, costumbres y claro, empecé a aprender un poco de francés. Unas semanas después de graduarme como maestro en ciencias, me subí a un avión y me fui a vivir a Francia.  Pasé 5 años viviendo en Estrasburgo, una cuidad en el noreste de Francia que está en la frontera con Alemania, durante esos 5 años, tuve la oportunidad de insertarme completamente en la cultura francesa, aprendí a hablar francés, aprendí mucho de la cultura francesa, su gastronomía, los famosos vinos franceses, las cervezas artesanales, la pasión por la naturaleza, el arte, etc.  Además, tuve la oportunidad de visitar muchos lugares representativos de Francia y logré hacer excelentes amigos.
+                                Hasta la fecha, sigo sintiendo una gran pasión por la cultura francesa, me gusta hablar francés, cocinar uno que otro platillo tradicional y degustar un buen vino francés de vez en cuando.  Así que, estaré muy contento de compartir un poco de mi pasión con ustedes en este club de francés de la FCQB.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseEduardoC" role="button" aria-expanded="false" aria-controls="collapseEduardoC" onclick="openTextShortAll(5)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/EDUARDO CASTAÑEDA.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/MAYRUT OSDELY URIOSTEGUI.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-left club" style="margin: 0; padding:0;">Club Pro-ambiente</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-left size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Dra. Mayrut O. Uriostegui</p>
+                            <div class="close-box-collapse">
+                                Mi gusto por el cuidado del ambiente inicio desde pequeña
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseMayrutO" role="button" aria-expanded="false" aria-controls="collapseMayrutO" onclick="closeTextShortAll(6)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseMayrutO">
+                                Mi gusto por el cuidado del ambiente inicio desde pequeña, en casa se recolecta PET desde hace años y cuidar plantas no se diga en mi casa no deben de faltar las plantas de diversos tipo como de ornato o curativas para algún padecimiento. Es por ello mi gusto por el cuidado del ambiente; muy a parte soy toxicóloga y pues observamos los daños a los diferentes niveles como son: agua, suelo, aire, humanos y animales. Es preocupante que poco hacemos por cuidar nuestro entornos por ello se creó el club de Pro-ambiente con la intención de que ustedes los jóvenes sean protagonistas de poner un granito de arena y empezar por su segunda casa a cuidar el entorno que les rodea.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseMayrutO" role="button" aria-expanded="false" aria-controls="collapseMayrutO" onclick="openTextShortAll(6)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-right club" style="margin: 0; padding:0;">Club de Cocina</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-right size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Dra. Patricia Ávila Caballero</p>
+                            <div class="close-box-collapse text-right">
+                                Una de las actividades cotidianas más importantes en cual
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapsePatriciaA" role="button" aria-expanded="false" aria-controls="collapsePatriciaA" onclick="closeTextShortAll(7)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapsePatriciaA">
+                                Una de las actividades cotidianas más importantes en cualquier  hogar es cocinar. A través de la cocina cuidamos nuestra salud y despertamos nuestros sentidos.  La cocina es una actividad maravillosa que nos ayuda a conocernos a nosotros mismos y a conocer los saberes y sabores ancestrales de generaciones pasadas que muchas veces se pierden con el paso del tiempo.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapsePatriciaA" role="button" aria-expanded="false" aria-controls="collapsePatriciaA" onclick="openTextShortAll(7)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/PATRICIA AVILA CABALLERO.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/GERARDO HUERTA.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-left club" style="margin: 0; padding:0;">Club de Matemáticas</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-left size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Dr. Gerardo Huerta B.</p>
+                            <div class="close-box-collapse">
+                                ¿Qué, qué hago? Puedo decir que muchas cosas. Pero algo
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseGerardoH" role="button" aria-expanded="false" aria-controls="collapseGerardoH" onclick="closeTextShortAll(8)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseGerardoH">
+                                ¿Qué, qué hago? Puedo decir que muchas cosas. Pero algo que me apasiona es conocer la cultura, artesanías, gastronomía y tradiciones en diferentes lugares, en especial pueblos mágicos. También me apasiona conocer y explicar como funcionan las cosas y lo hago siempre buscado la aplicación de las matemáticas, una de las ciencias más antiguas, que surgió del estudio de las figuras geométricas y la aritmética con números. 
+                                Las matemáticas nos ayudan a desarrollar el pensamiento analítico y la capacidad de investigar. Las matemáticas son esenciales en un mundo en constante cambio, forman parte de nuestra vida cotidiana, en las compras de diario hasta en la explicación de fenómenos como los eclipses, movimiento de las estrellas, etc.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseGerardoH" role="button" aria-expanded="false" aria-controls="collapseGerardoH" onclick="openTextShortAll(8)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-right club" style="margin: 0; padding:0;">Club de Ajedrez</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-right size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Biol. Gerardo Padilla Hdez.</p>
+                            <div class="close-box-collapse text-right">
+                                Me gusta el ajedrez porque es una disciplina que requiere
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseGerardoP" role="button" aria-expanded="false" aria-controls="collapseGerardoP" onclick="closeTextShortAll(9)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseGerardoP">
+                                Me gusta el ajedrez porque es una disciplina que requiere concentración, capacidad de planeación y táctica. Cada partida es única y durante el desarrollo de la misma las decisiones que se tomen son las que determinan el resultado.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseGerardoP" role="button" aria-expanded="false" aria-controls="collapseGerardoP" onclick="openTextShortAll(9)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/GERARDO PADILLA HDEZ.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-auto m-0 p-0">
+                            <img src="img/JORDAN I.DE JESUS SOLIS.jpg" alt="..." class="border-circle border-clubes">
+                        </div>
+                        <div class="col-6 mt-4 text-justify mx-0 px-0">
+                            <p class="font-berkley color-clubes size-3rem text-left club" style="margin: 0; padding:0;">Club de Química</p>
+                            <hr class="hr-clubes">
+                            <p class="color-clubes text-left size-2rem dr" style="font-family: 'Adobe Caslon Pro Bold';">Biol. Jordan De Jesús Solís</p>
+                            <div class="close-box-collapse">
+                                En el mundo siempre nos hemos preguntado que están consti
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseJordanS" role="button" aria-expanded="false" aria-controls="collapseJordanS" onclick="closeTextShortAll(10)">
+                                        Leer más...
+                                    </a>
+                                </small>
+                            </div>
+                            <div class="collapse" id="collapseJordanS">
+                                En el mundo siempre nos hemos preguntado que están constituidas todas las cosas, es decir, cual es la unidad mínima que se encuentra presente en toda la materia del universo. Y es donde nos preguntamos, ¿Qué ciencia se encarga de estudiar a la materia que se encuentra en todo el universo? La respuesta es sí. La ciencia que estudia a la materia es la Química su estructura, composición y los fenómenos que la transforman. Además, la materia es todo lo que nos rodea, por lo tanto, los seres humanos también están constituidos de materia.
+                                Nosotros entonces también somos materia, lo que nos rodea también es materia. Sin embargo, ¿De que esta constituida la materia? ¿Cuál es la unidad mínima que constituye a la materia? La respuesta es el átomo. El átomo se encuentra en todas partes del universo, por lo tanto, para estudiarlos necesitamos conocer el maravillo mundo de la Química y todas las interacciones que pueda tener con otras ciencias, además, de todas las reacciones químicas que involucran a esta bonita ciencia.
+                                <small class="color-clubes cursor-pointer">
+                                    <a data-toggle="collapse" href="#collapseJordanS" role="button" aria-expanded="false" aria-controls="collapseJordanS" onclick="openTextShortAll(10)">
+                                        [Leer menos]
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mt-5 text-center">
+                        <div class="col-auto mt-5">
+                            <img src="img/DAYSI NAVEZ GONZALEZ.jpg" alt="" class="border-clubes">
+                            <font color="#C00000" style="font-family: 'Adobe Caslon Pro Bold';">
+                                <p class="size-2rem m-0 club"><i><b>Coordinadora general</b></i></p>
+                                <p class="size-2rem m-0 dr">MC. Daysi Návez González</p>
+                            </font>
+                        </div>
+                    </div>
+        
+                    <div class="row justify-content-center mt-5 text-center">
+                        <div class="col line-height-3em" style="font-family: 'Adobe Caslon Pro Bold';">
+                            <p class="size-3rem color-clubes"><a target="_blank" href="https://forms.gle/tikfpcrwfSac5NvG9" class="text-reset color-clubes club"><i>Inscríbete aquí!</i></a></p>
+                        </div>
+                        <div class="col-12 line-height-4em mt-5">
+                            <p class="size-4rem font-berkley color-clubes club">Orgullosamente<br>UAGro</p>
+                        </div>
+                    </div>
+                </div>
+                
+        
+                <script>
+                    let closeTextShort = document.getElementsByClassName('close-box-collapse');
+                    let closeDiv = document.getElementsByClassName('close-forced');
+                    console.log(closeTextShort);
+                    function closeTextShortAll(position){
+        
+                        closeTextShort[position-1].style.display = "none";
+                    }
+                    function openTextShortAll(position){
+                        closeTextShort[position-1].style.display = "block";
+                    }
+                </script>
+
+
+
+
+
+
+
+
+
+
+
+            </div><!-- Div Fin #3 -->
+		</div><!-- Div Fin #2-->
+		<div class="row bg-gray-200 pt-5 border-top color_7C7777">
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 lead">
+				<p class="">ENLACES<p>
+				<blockquote class="blockquote lead">
+					<p><small>UNIVERSIDAD AUT&Oacute;NOMA DE GUERRERO</small></p>
+					<footer class="blockquote-footer"><a href="https://www.uagro.mx/" target="_blank">UAGro</a></footer>
+				</blockquote>
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 lead">
+				<p>¿Qu&eacute; es sepi-uagro.mx?</p>
+				<p>(SEPI) Sistema de Evaluaci&oacute;n de Proyectos de Investigaci&oacute;n
+				<P>Programa &uacute;nico de tr&aacute;mites, informaci&oacute;n y participaci&oacute;n del Programa Educativo de Biotecnolog&iacute;a
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 lead">
+				<p>Fallas T&eacute;cnicas</p>
+				<p>atencionsepi@outlook.com</p>
+			</div>
+			<div class="col-12 text-center">
+				<p class="">SEPI © 2019-2021</p>
+			</div>
+		</div>
+	</div> <!-- Div Fin| #1 -->
+	
+<!-- JavaScript Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
